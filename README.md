@@ -1,2 +1,2 @@
 # Grupo-3
-Este es el repositorio del grupo 3 donde se realizarán las asignaciones planteadas por el docente
+Repositorio del grupo 3 donde se publicará los cambios del proyectos asignados por el Docente
