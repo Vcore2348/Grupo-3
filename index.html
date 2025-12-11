@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/unefa-logo.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    
+    <title>Login UNEFA</title>
+    
+</head>
+    
+    <body>
+        <div class="container">
+            <img src="assets/logo25.png" alt="unefa-logo">
+
+            <div class="formulario" method="POST">
+                <h1 class="header-titulo">Iniciar Sesión</h1>
+                <a>👤 Usuario o Cédula:</a> <br>
+                <input type="text" class="input-cedula" placeholder="Escribe tu nombre de usuario o cédula">
+                <br>
+                <a>🔒 Contraseña:</a> <br>
+                <input type="password" class="input-passwd" id="password" placeholder="Ingrese su contraseña"><br>
+                <a class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <br>
+                <br>
+                <a href="http://127.0.0.1:5000">
+                <button type="button" type="submit">Iniciar sesión</button> <br>
+                </a>
+
+                <a class="repositorio" href="https://github.com/Vcore2348/Grupo-3" target="_blank">Dirigirse al repositorio</a>
+            </div>
+        </div>
+
+
+        <style>
+            body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .input-password {
+                display: flex;
+
+            }
+
+            .boton-texto {
+                color: white;
+                background-color: rgb(26, 145, 166);
+            }
+
+            
+            .container {
+                position: absolute;
+                background-color: rgb(198, 198, 198);
+                padding: 50px;
+                border-radius: 5px 5px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .container img {
+                width: 150px;
+                height: 200px;
+                display: block;
+            }
+
+            .input-cedula {
+                padding: 5px;
+                margin-bottom: 12px;
+                width: 240px;
+                border: 5px 0px black;
+            }
+            
+
+            .formulario button {
+                position: relative;
+                background-color: blue;
+                border: none;
+                padding: 2px;
+                width: 120px;
+                height: 38px;
+                border-radius: 5px;
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                
+            }
+            
+            .forgot-password {
+                position: absolute;
+                margin-top: 3px;
+                color: black;
+                text-decoration: none;
+                
+            }
+
+            .forgot-password:hover {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .formulario button:hover {
+                background-color: rgb(92, 92, 92);
+                color: black;
+                cursor: pointer;
+            }
+
+            .repositorio {
+                position: fixed;
+                text-align: right;
+                top: 90%;
+                left: 68%;
+                font-size: 14px;
+                text-decoration: none;
+                color: blue;
+                
+            }
+
+            .repositorio:hover {
+                text-decoration: underline;
+                color: black;
+            }
+
+            .input-passwd {
+                padding: 5px;
+                width: 240px;
+            }
+        </style>
+    </body>
+</html>
