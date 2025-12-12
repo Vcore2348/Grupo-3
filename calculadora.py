@@ -3,7 +3,12 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/calculadora", methods=["GET", "POST"])
 def calculadora():
     pantalla = request.form.get("pantalla", "0")
     boton = request.form.get("boton")
