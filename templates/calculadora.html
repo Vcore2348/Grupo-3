@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora temporal</title>
+    <title>UNEFA Calculadora</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/normalize.css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='assets/unefa-logo.png') }}" type="image/x-icon">
 
 </head>
@@ -18,29 +18,34 @@
             </button>
 
             <div class="carcasa">
-                    <div class="pantalla">0</div>
-                
-                    <div class="calculator_buttons">
-                        <button id="1">1</button>
-                        <button id="2">2</button>
-                        <button id="3">3</button>
-                        <button id="addition">+</button>
+                    <div class="pantalla">{{ pantalla }}</div>
 
-                        <button id="4">4</button>
-                        <button id="5">5</button>
-                        <button id="6">6</button>
-                        <button id="substract">-</button>
+                    <form method="POST">
+                        <div class="calculator_buttons">
+                            <input type="hidden" name="pantalla" value="{{ pantalla }}">
+                            
+                                <button name="boton" value="1">1</button>
+                                <button name="boton" value="2">2</button>
+                                <button name="boton" value="3">3</button>
+                                <button name="boton" value="+">+</button>
 
-                        <button id="7">7</button>
-                        <button id="8">8</button>
-                        <button id="9">9</button>
-                        <button id="multiply">*</button>
-                        
-                        <button id="clear">C</button>
-                        <button id="0">0</button>
-                        <button id="equals">=</button>
-                        <button id="division">/</button>
+                                <button name="boton" value="4">4</button>
+                                <button name="boton" value="5">5</button>
+                                <button name="boton" value="6">6</button>
+                                <button name="boton" value="-">-</button>
+
+                                <button name="boton" value="7">7</button>
+                                <button name="boton" value="8">8</button>
+                                <button name="boton" value="9">9</button>
+                                <button name="boton" value="*">*</button>
+                                    
+                                <button name="boton" value="C">C</button>
+                                <button name="boton" value="0">0</button>
+                                <button name="boton" value="=">=</button>
+                                <button name="boton" value="/">/</button>
+                    
                     </div>
+                 </form>
 
 
                     <script type="text/javascript">
@@ -72,6 +77,14 @@
                             font-size: 16px;
                             background-color: white;
                             border: 1px solid #aaa;
+                        }
+
+                        .calculator_buttons button[value="C"] {
+                            background-color: red;
+                        }
+
+                        .calculator_buttons button[value="="] {
+                            background-color: rgb(0, 172, 0);
                         }
 
                         .calculator_buttons button:hover {
