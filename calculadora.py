@@ -8,9 +8,8 @@ def calculadora():
     pantalla = request.form.get("pantalla", "0")
     boton = request.form.get("boton")
 
-
     #
-    # Este códgio es para recibir señales del formulario que se encuentra en la calculadora.html
+    # Este código es para recibir señales del formulario que se encuentra en la calculadora.html
     #
     if boton:
         if boton == "C":
